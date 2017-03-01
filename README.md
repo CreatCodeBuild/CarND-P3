@@ -98,7 +98,7 @@ def normalize(img):
     return (img - mean) / std
 
 def preprocess_image(img):
-    img = imresize(img[60:150, :, :], (66, 200))
+    img = imresize(img[60:150, :, :], (200, 66))
     return normalize(img)
 ```
 I also tried a simple linear interpolation which maps value in [0, 255] to [-1.0, 1.0] and/or [-0.5, 0.5]. 
@@ -127,7 +127,23 @@ train('nvidia_cfr25.h5', batch_size=512, nb_epoch=30, valid_split=0.1, center_on
 You can look at `model.py` for more details.
 
 ## Result
+### Training History
+### Video
 
-## Discussion
+## Discussion and Future Work
+As you can see, with Udacity data along , I am able to train a genralized regressor. It still fails in some edge cases. I didn't use random lighting/color adjustment or shifting/rotation to augment the data. But, I believe with more data and data augmentation, the model is powerful enough to learn more patterns.
+
+Also, from a self-driving car point of view, behavior clone approach has a fatal problem. It is only as good as its driver. But human driving are not consistant and stable. Cloning human driving behavior may not be a good way to produce good driving agent. It's a way to produce human like driving agent. However, the goal of self-driving car is to eliminate the dangerous elements in human driving and replace them with well designed and engineered safe, reliable driving.
 
 ## Code
+Assuming you have your "driving_log.csv" in the `./data` directory, simply run
+```
+python model.py
+```
+to build and train the model.
+
+Run
+```
+python analytic.py
+```
+to see the analysis.
