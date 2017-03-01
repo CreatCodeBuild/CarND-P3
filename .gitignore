@@ -1,0 +1,19 @@
+# folder
+simulator-windows-64/
+.idea/
+IMG/
+data/
+linux/
+simulator-linux/
+history/
+windows/
+models/
+old_code/
+sharp_turn/
+
+# file extension
+*.npy
+*.pyc
+*.h5
+
+!*.gitkeep
