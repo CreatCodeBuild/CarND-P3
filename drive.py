@@ -58,7 +58,7 @@ def normalize(img):
     return (img - mean) / std
 
 def preprocess_image(img):
-    img = imresize(img[60:150, :, :], (66, 200))
+    img = imresize(img[60:150, :, :], (200, 66))
     return normalize(img)
 
 @sio.on('telemetry')
