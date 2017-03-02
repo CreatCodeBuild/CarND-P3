@@ -128,6 +128,11 @@ You can look at `model.py` for more details.
 
 ## Result
 ### Training History
+|               | Center                        | Center Left Right            |
+|:-------------:|:-----------------------------:|:----------------------------:|
+|No Sharp Turn  |![](plot/center.png)           |![](plot/cfr25.png)           |
+| Sharp Turn    |![](plot/center_sharp_turn.png)|![](plot/cfr25_sharp_turn.png)|
+
 ### Video
 
 ## Discussion and Future Work
