@@ -151,6 +151,8 @@ Although the training loss was much more, but the car actually perform much bett
 I included the videos for track 1 and track 2 for this experiment.
 
 ### Video
+[Track 1](https://www.youtube.com/watch?v=F70QZbMNi1I)  
+[Track 2](https://www.youtube.com/watch?v=ukBT-UFJVhE)
 
 ## Discussion and Future Work
 As you can see, with Udacity data along , I am able to train a genralized regressor. It still fails in some edge cases. I didn't use random lighting/color adjustment or shifting/rotation to augment the data. But, I believe with more data and data augmentation, the model is powerful enough to learn more patterns.
