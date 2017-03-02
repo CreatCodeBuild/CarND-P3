@@ -131,13 +131,24 @@ You can look at `model.py` for more details.
 I used 10% of the center images as validation and trained for 30 epochs for all 4 experiments. I didn't use a fixed random seed for shuffling and I shuffled the training set before each epoch. Therefore, the performance across different runs varied.
 
 ![](plot/center.png)
+
 I first trained the network with Udacity center images only. Surprisingly, the validation was almost parallel to training and was about 0.0002 lower than the training loss. The validation reached as low as 0.00075. I tried to train more epochs but that introduced overfit.
 
 The car was able to drive across the bridge and made the first sharp turn after the bridge. But it was not able to make the second sharp turn.
 
 ![](plot/cfr25.png)
+
+Using center, left and right images, we still got under 0.001 loss. But we saw a small overfitting. The car was above to drive through the bridge because it turned to left and right too much.
+
 ![](plot/center_sharp_turn.png)
+
+Center images only but adding sharp turn data. The result is about the same as center data only without sharp turn data. Although we saw a much worse overfit, but the driving performance was not hurt. It was able to drive across the bridge and make the first sharp turn. The second sharp turn was half successful. It did not have enough "knowledge" to make shapr turnes.
+
 ![](plot/cfr25_sharp_turn.png)|
+
+Although the training loss was much more, but the car actually perform much better. It was able to drive track 1 successfully. It could drive most of track 2 but failed at the everything end.
+
+I included the videos for track 1 and track 2 for this experiment.
 
 ### Video
 
